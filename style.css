@@ -18,6 +18,8 @@ button {
     border: 1px solid green;
     border-radius: 1em;
     background-color: rgb(205, 218, 219);
+    margin: auto;
+    width: 50%;
   }
 
 .pad-button {
@@ -92,6 +94,12 @@ button:active{
     grid-template-rows: auto auto auto auto auto;
     grid-auto-columns: auto auto auto auto auto;
 } 
+
+#attribution {
+    text-align: center;
+    margin: auto;
+}
+
 
 /* 3D Title styling */
 .title {

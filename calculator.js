@@ -1,4 +1,11 @@
+//////////////////////////////////////////////////////////////////////////
 // Basic arithmetic functions of our calculator
+// Input:
+//          - num1, num2: Number values to perform the operation on
+//          - num: a single number value to perform inversion on
+// Output:
+//          - A number result of the operation
+//////////////////////////////////////////////////////////////////////////
 
 function add(num1, num2){
     return num1 + num2;
@@ -19,9 +26,19 @@ function invert(num){
     return -1 * num;
 }
 
-// Operate function decides which arithmetic function to use given inputs
+//////////////////////////////////////////////////////////////////////////
+// Operate function 
+// Purpose: decides which arithmetic function to use given inputs
+// Input: 
+//          - operator: A string representation of the arithmetic operation
+//          - num1, num2: Number values to perform the operation on
+// Output: 
+//          -  A number result of the operation
+//          - A number result of a division operation to seven decimal places
+//          - 0 if division by zero attempted
+//////////////////////////////////////////////////////////////////////////
 
-function operate(operator, num1, num2){
+function operate(operator, num1, num2=0){
     switch (operator){
         case '+':
             return add(num1, num2);
@@ -39,7 +56,7 @@ function operate(operator, num1, num2){
             }
             return divide(num1, num2).toPrecision(7);
             break;
-        case '+/':
+        case '+/-':
             return invert(num1);
             break;
     }
@@ -104,10 +121,20 @@ function buttonPressed(event){
         calculator.deleteNumber();
 
     // ---------------------------------------------------
+    } else if (event.target.matches('.sign-button')){
+        calculator.invertDisplayValue();
     }
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// Our Calculator Object:
+// Attributes:
+//              - display: A string representation of the current value displayed
+//              - register: An array to store operands, operators, and operation results
+//              - results: A DOM element where we send our operation and display results
+//              - clickListener: A listener that waits for click events
+///////////////////////////////////////////////////////////////////////////////////////////////
 
-// Our Calculator Object, which 
+
 
 
 let calculator = {
@@ -144,6 +171,10 @@ let calculator = {
 
     deleteNumber: function() {
         this.results.value = this.results.value.slice(0, this.results.value.length - 1);
+        this.display = this.results.value;
+    },
+    invertDisplayValue: function(){
+        this.results.value = operate('+/-', this.results.value);
         this.display = this.results.value;
     }
 };
