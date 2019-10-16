@@ -1,14 +1,8 @@
-#calculator-pad {
-    display: grid;
-    border-radius: 7px;
-    margin: 12px;
-    grid-template-rows: auto auto auto auto auto;
-    grid-auto-columns: auto auto auto auto auto;
-} 
-  
+body {
+    background-color: rgb(96, 155, 211);
+}
 
-.button {
-    border: 1px groove rgba(203, 114, 255, 0.8);
+button {
     border-radius: 5px;
     padding: 20px;
     font-size: 30px;
@@ -16,9 +10,106 @@
     text-decoration:none;
     font-family:'Roboto',sans-serif;
     font-weight:300;
-    color:rgb(0, 0, 0);
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     text-align:center;
     transition: all 0.2s;
   }
 
+.box {
+    border: 1px solid green;
+    border-radius: 1em;
+    background-color: rgb(205, 218, 219);
+  }
+
+.pad-button {
+    border: 1px groove rgba(131, 255, 255, 0.842);
+    background-color: rgba(0, 162, 255, 0.35);
+    text-shadow: 0 0.04em 0.04em rgba(29, 44, 43, 0.35);
+    color:rgb(11, 50, 124);
+}
+
+.op-button {
+    border: 1px groove rgba(0, 247, 255, 0.8);
+    background-color: rgb(123, 93, 230);
+    color:rgb(3, 216, 231);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.2);
+}
+
+.equals-button {
+    border: 1px groove rgba(0, 247, 255, 0.8);
+    background-color: rgb(34, 7, 133);
+    color:rgb(43, 235, 193);
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3);
+}
+
+.clear-button {
+    border: 1px groove rgba(0, 247, 255, 0.8);
+    background-color: rgb(221, 0, 74);
+    text-shadow: 0 0.04em 0.04em rgba(29, 44, 43, 0.35);
+    color:rgb(0, 27, 78);
+}
+
+.sign-button {
+    border: 1px groove rgba(131, 255, 255, 0.842);
+    background-color: rgba(0, 162, 255, 0.35);
+    text-shadow: 0 0.04em 0.04em rgba(29, 44, 43, 0.35);
+    color:rgb(11, 50, 124);
+}
+
+.back-button {
+    border: 1px groove rgba(131, 255, 255, 0.842);
+    background-color: rgba(29, 255, 199, 0.35);
+    text-shadow: 0 0.04em 0.04em rgba(17, 247, 120, 0.733);
+    color:rgb(11, 50, 124);
+}
+
+
+button:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.25),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+
+.equals-button:active{
+    box-shadow:inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.25),inset 0 0 0em 0.05em rgba(20, 1, 1, 0.12);
+}
+
+#results {
+    margin: 3em 1em 1em 1em;
+    width: 95%;
+    height: 3%;
+    background-color: rgb(248, 255, 255);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+#results-container {
+    text-align: center;
+}
+
+#calculator-pad {
+    display: grid;
+    border-radius: 7px;
+    margin: 12px;
+    grid-template-rows: auto auto auto auto auto;
+    grid-auto-columns: auto auto auto auto auto;
+} 
+
+/* 3D Title styling */
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+  }
