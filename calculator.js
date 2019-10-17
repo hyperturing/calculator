@@ -51,7 +51,7 @@ function operate(operator, num1, num2=0){
             break;
         case '/':
             if (num2 == 0){
-                return 0;
+                return 'ERROR';
                 break;
             }
             return divide(num1, num2).toPrecision(7);
@@ -172,6 +172,7 @@ let calculator = {
     deleteNumber: function() {
         this.results.value = this.results.value.slice(0, this.results.value.length - 1);
         this.display = this.results.value;
+        this.register[0] = this.results.value;
     },
     invertDisplayValue: function(){
         this.results.value = operate('+/-', this.results.value);
