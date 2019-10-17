@@ -75,9 +75,12 @@ function buttonPressed(event){
         if (calculator.register[0]){
 
             if(calculator.register[1]){
-                calculator.register[2] = event.target.value;
+                if (calculator.register[2]){
+                    calculator.register[2] += event.target.value;
+                } else
+                    calculator.register[2] = event.target.value;
             }
-            calculator.clearDisplay();
+            //calculator.clearDisplay();
         }
         calculator.appendToDisplay(event.target.value);
 
@@ -103,7 +106,7 @@ function buttonPressed(event){
             // 4. We have an input value in the register, an operation, and a 2nd input value
             calculator.totalInputs();
         }
-
+    calculator.appendToDisplay(' ' + event.target.value + ' ');
     // --------------------------------------------------
     } else if (event.target.matches('.equals-button')){
         if (calculator.register.length === 3)
@@ -143,9 +146,9 @@ let calculator = {
     results: document.querySelector('#results'),
     clickListener :  document.addEventListener('click', buttonPressed),
 
-    appendToDisplay: function(num) {
-        this.results.value += num;
-        this.display += num;
+    appendToDisplay: function(val) {
+        this.results.value += val;
+        this.display += val;
     },
     
     clearDisplay: function(){

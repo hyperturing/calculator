@@ -3,7 +3,7 @@ body {
 }
 
 button {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 7%;
     font-size: 30px;
     text-align: center;
@@ -12,6 +12,7 @@ button {
     font-weight:300;
     text-align:center;
     transition: all 0.2s;
+    margin: 2%;
   }
 
 .box {
