@@ -101,6 +101,14 @@ button:active{
     margin: auto;
 }
 
+#attribution h4 {
+    color: rgb(74, 3, 167);
+    text-shadow: 0 0.04em 0.04em rgba(187, 168, 224, 0.822);
+}
+
+#attribution a:hover {
+    text-shadow: 0 0.04em 0.04em rgb(255, 255, 255);
+}
 
 /* 3D Title styling */
 .title {
