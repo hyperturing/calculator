@@ -4,8 +4,7 @@ This is an ODIN Project task designed to create a functional calculator. It's pu
 
 ## Getting Started
 
-- Clone the source files from the repository:
-* [Calculator](https://github.com/hyperturing/calculator) - Calculator Repository
+- Clone the source files from the repository: https://github.com/hyperturing/calculator
 - Copy the source files into your own Github page repository
 
 ## Deployment
@@ -19,10 +18,6 @@ Follow the steps on Github Pages to create your own Github site to easily deploy
 ## Authors
 
 * **Ash Peterson** - *Initial work* - https://github.com/hyperturing
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
